@@ -7,7 +7,7 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Amplify test <code>src/App.js</code> try to uploading to Amplify AWS.
+          Amplify test <code>src/App.js</code> try to uploading to Amplify AWS בהצלחה.
         </p>
         <a
           className="App-link"
