@@ -10,35 +10,35 @@ export default function Portfolio() {
   const projects = [
     {
       title: "Tickets store",
-      description: "A fully functional e-commerce website built with React and Node.js.",
+      description: "A website for selling tickets for concerts and parties, built and designed using HTML CSS JS.",
       imageUrl: "https://images.pexels.com/photos/1190298/pexels-photo-1190298.jpeg?auto=compress&cs=tinysrgb&w=600",
       liveUrl: "https://music-ticket.netlify.app/",
       githubUrl: "https://github.com/King-moshe/Tickets-store"
     },
     {
       title: "Arrow Game",
-      description: "A task management application built using React and Firebase.",
+      description: "A game of uploading pictures and moving them inside a cube that limits displacement.",
       imageUrl: "https://images.pexels.com/photos/18000224/pexels-photo-18000224/free-photo-of-people-in-sports-field.jpeg?auto=compress&cs=tinysrgb&w=600",
       liveUrl: "https://arrow-image-game.netlify.app/",
       githubUrl: "https://github.com/King-moshe/Arrow-move-Game"
     },
     {
       title: "Weather App",
-      description: "A task management application built using React and Firebase.",
+      description: "A site that displays the weather around the world by searching for a destination.",
       imageUrl: "https://images.pexels.com/photos/269724/pexels-photo-269724.jpeg?auto=compress&cs=tinysrgb&w=600",
       liveUrl: "https://world-weather-appliction.netlify.app/",
       githubUrl: "https://github.com/King-moshe/Weather-App"
     },
     {
-      title: "Weather App",
-      description: "A task management application built using React and Firebase.",
+      title: "Cient management",
+      description: "Tenant management site in a new residential project, working in the interface with professionals in the field of construction.",
       imageUrl: "https://media.istockphoto.com/id/981339754/photo/silhouette-of-engineer-and-construction-team-working-at-site-over-blurred-background-sunset.jpg?b=1&s=612x612&w=0&k=20&c=5TNaaHXK4HaMg81FWc85KtnyvAGbbjU4VJc_EYyfAcg=",
       liveUrl: "https://home-board.netlify.app/",
       githubUrl: "https://github.com/King-moshe/homeBoard-clientSide"
     },
     {
       title: "AWS Amplify Cloud",
-      description: "A task management application built using React and Firebase.",
+      description: "A personal work site that presents the projects I built, about me and contact methods.",
       imageUrl: "https://images.pexels.com/photos/14936128/pexels-photo-14936128.jpeg?auto=compress&cs=tinysrgb&w=600",
       liveUrl: "https://main.d1tbejhneij7v7.amplifyapp.com/",
       githubUrl: "https://github.com/King-moshe/amplify-react"

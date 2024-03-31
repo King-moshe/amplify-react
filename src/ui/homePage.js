@@ -33,7 +33,7 @@ export default function Homepage() {
       <main className="flex-1 container mx-auto px-6 py-12">
         <div className="max-w-lg mx-auto text-center">
           <h2 className={darkMode ? 'text-4xl font-bold text-gray-300 mb-4' : 'text-4xl font-bold text-gray-800 mb-4'}>Welcome to My Portfolio</h2>
-          <img src="https://images.pexels.com/photos/5926397/pexels-photo-5926397.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Moshe" className="mx-auto w-64 h-64 rounded-full mb-6" />
+          <img src='https://images.pexels.com/photos/11035388/pexels-photo-11035388.jpeg?auto=compress&cs=tinysrgb&w=600' alt="Moshe Profile" className="mx-auto w-64 h-64 rounded-full mb-6" />
           <p className={darkMode ? 'text-lg text-gray-400' : 'text-lg text-gray-600'}>I'm Moshe, a fullstack developer passionate about crafting clean and efficient code.</p>
           <a href="/portfolio" className="mt-6 inline-block bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-lg">View Portfolio</a>
         </div>
