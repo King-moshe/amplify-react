@@ -39,7 +39,7 @@ export default function Portfolio() {
     {
       title: "AWS Amplify Cloud",
       description: "A task management application built using React and Firebase.",
-      imageUrl: "https://www.istockphoto.com/photo/cloud-computing-gm1318623693-405696291?utm_campaign=srp_photos_10&utm_content=https%3A%2F%2Fwww.pexels.com%2Fsearch%2Fcloud%2F&utm_medium=affiliate&utm_source=pexels&utm_term=cloud",
+      imageUrl: "https://images.pexels.com/photos/14936128/pexels-photo-14936128.jpeg?auto=compress&cs=tinysrgb&w=600",
       liveUrl: "https://main.d1tbejhneij7v7.amplifyapp.com/",
       githubUrl: "https://github.com/King-moshe/amplify-react"
     },
