@@ -2,6 +2,13 @@ import React from 'react';
 import WbSunnyOutlinedIcon from '@mui/icons-material/WbSunnyOutlined';
 import NightlightRoundIcon from '@mui/icons-material/NightlightRound';
 import { useDarkMode } from '../darkModeContext'; // Import the custom hook
+import { FaReact } from "react-icons/fa";
+import { TiCss3, TiHtml5 } from "react-icons/ti";
+import { SiTailwindcss } from "react-icons/si";
+import { FaAws } from "react-icons/fa";
+import { IoLogoJavascript } from "react-icons/io";
+import { DiNodejs } from "react-icons/di";
+import { FaNode } from "react-icons/fa";
 
 export default function Portfolio() {
   const { darkMode, toggleDarkMode } = useDarkMode(); // Access dark mode state and toggle function
@@ -11,6 +18,11 @@ export default function Portfolio() {
     {
       title: "Tickets store",
       description: "A website for selling tickets for concerts and parties, built and designed using HTML CSS JS.",
+      icon: [
+        <TiHtml5 className='text-orange-600 mr-1.5' />,
+        <TiCss3 className='text-black mr-1.5' />,
+        <IoLogoJavascript color='black' />
+      ],
       imageUrl: "https://images.pexels.com/photos/1190298/pexels-photo-1190298.jpeg?auto=compress&cs=tinysrgb&w=600",
       liveUrl: "https://music-ticket.netlify.app/",
       githubUrl: "https://github.com/King-moshe/Tickets-store"
@@ -18,6 +30,9 @@ export default function Portfolio() {
     {
       title: "Arrow Game",
       description: "A game of uploading pictures and moving them inside a cube that limits displacement.",
+      icon: [
+        <IoLogoJavascript color='black' />,
+      ],
       imageUrl: "https://images.pexels.com/photos/18000224/pexels-photo-18000224/free-photo-of-people-in-sports-field.jpeg?auto=compress&cs=tinysrgb&w=600",
       liveUrl: "https://arrow-image-game.netlify.app/",
       githubUrl: "https://github.com/King-moshe/Arrow-move-Game"
@@ -25,6 +40,9 @@ export default function Portfolio() {
     {
       title: "Weather App",
       description: "A site that displays the weather around the world by searching for a destination.",
+      icon: [
+        <IoLogoJavascript color='black' />,
+      ],
       imageUrl: "https://images.pexels.com/photos/269724/pexels-photo-269724.jpeg?auto=compress&cs=tinysrgb&w=600",
       liveUrl: "https://world-weather-appliction.netlify.app/",
       githubUrl: "https://github.com/King-moshe/Weather-App"
@@ -32,13 +50,25 @@ export default function Portfolio() {
     {
       title: "Cient management",
       description: "Tenant management site in a new residential project, working in the interface with professionals in the field of construction.",
+      icon: [
+        <IoLogoJavascript className='text-black mr-1.5' />,
+        <FaReact className='text-blue-700 mr-1.5' />,
+        <SiTailwindcss className='text-blue-400 mr-1.5' />,
+        <FaNode className='text-green-700 text-4xl mr-1.5 ' />,
+      ],
       imageUrl: "https://media.istockphoto.com/id/981339754/photo/silhouette-of-engineer-and-construction-team-working-at-site-over-blurred-background-sunset.jpg?b=1&s=612x612&w=0&k=20&c=5TNaaHXK4HaMg81FWc85KtnyvAGbbjU4VJc_EYyfAcg=",
       liveUrl: "https://home-board.netlify.app/",
       githubUrl: "https://github.com/King-moshe/homeBoard-clientSide"
     },
     {
       title: "AWS Amplify Cloud",
-      description: "A personal work site that presents the projects I built, about me and contact methods.",
+      description: "A personal job site showing the projects I built, about me and contact methods, built in React and stored in the AWS cloud.",
+      icon: [
+        <FaReact color='blue' className=' mr-1.5' />,
+        <TiHtml5 className='text-orange-600 mr-1.5' />,
+        <SiTailwindcss className='text-blue-400 mr-1.5' />,
+        <FaAws className='text-black' />
+      ],
       imageUrl: "https://images.pexels.com/photos/14936128/pexels-photo-14936128.jpeg?auto=compress&cs=tinysrgb&w=600",
       liveUrl: "https://main.d1tbejhneij7v7.amplifyapp.com/",
       githubUrl: "https://github.com/King-moshe/amplify-react"
@@ -80,6 +110,7 @@ export default function Portfolio() {
                 <div className="p-6">
                   <h3 className="text-xl font-bold text-gray-800 mb-2">{project.title}</h3>
                   <p className="text-gray-600 mb-4">{project.description}</p>
+                  <p className="text-gray-600 mb-4 flex">{project.icon}</p>
                   <div className="flex justify-center">
                     <a href={project.liveUrl} className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-lg mr-4">Live Demo</a>
                     <a href={project.githubUrl} className="bg-gray-500 hover:bg-gray-600 text-white font-bold py-2 px-4 rounded-lg">GitHub</a>
