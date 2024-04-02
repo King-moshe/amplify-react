@@ -11,15 +11,19 @@ import { IoLogoJavascript } from "react-icons/io";
 import { SiMongodb } from "react-icons/si";
 import { FaNode } from "react-icons/fa";
 import { RiGithubFill } from "react-icons/ri";
+import { FaBootstrap } from "react-icons/fa";
+import { FaGitAlt } from "react-icons/fa";
+import { SiMui } from "react-icons/si";
 
 export default function About() {
   const { darkMode, toggleDarkMode } = useDarkMode(); // Access dark mode state and toggle function
   const skillset = [
     {
-      icon: <TiHtml5 className='text-orange-500 mb-3 text-5xl'/>,
+      icon: <TiHtml5 className='text-orange-500' />,
+      name: 'Html5',
     },
     {
-      icon: <TiCss3 />,
+      icon: <TiCss3 className='text-blue-500' />,
       name: 'CSS3',
     },
     {
@@ -27,15 +31,15 @@ export default function About() {
       name: 'Javascript',
     },
     {
-      icon: <FaReact />,
+      icon: <FaReact className='text-sky-600' />,
       name: 'React',
     },
     {
-      icon: <FaNode />,
+      icon: <FaNode className='text-green-700' />,
       name: 'Node.js',
     },
     {
-      icon: <SiTailwindcss />,
+      icon: <SiTailwindcss className='text-sky-500' />,
       name: 'Tailwind',
     },
     {
@@ -43,10 +47,31 @@ export default function About() {
       name: 'Express.js',
     },
     {
-      icon: < RiGithubFill/>,
+      icon: < RiGithubFill />,
       name: 'GitHub',
     },
+    {
+      icon: < FaBootstrap className='text-purple-600' />,
+      name: 'Bootstrap',
+    },
+    {
+      icon: < FaGitAlt className='text-orange-600' />,
+      name: 'Git',
+    },
+    {
+      icon: < SiMui className='text-blue-500' />,
+      name: 'Material UI',
+    },
+    {
+      icon: < SiMongodb className='text-green-800' />,
+      name: 'MongooDB',
+    },
+    {
+      icon: < FaAws />,
+      name: 'AWS',
+    },
   ]
+
   return (
     <div className={darkMode ? 'dark bg-gray-900 min-h-screen flex flex-col' : 'flex flex-col min-h-screen'}>
       {/* Header */}
@@ -81,17 +106,17 @@ export default function About() {
       </main>
 
       {/*Skills */}
-        <h2 className='text-center text-3xl font-bold'>Skillset</h2>
+      <h2 className={darkMode ? 'text-white text-center text-3xl font-bold mt-4' : 'mt-4 text-center text-3xl font-bold'}>Skillset</h2>
       <div className="mt-8 flex justify-center mb-10">
         <div className=' grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-12'>
-        {skillset.map((skillset,index)=>(
-          <div key={index} className='bg-white shadow-md rounded-lg overflow-hidden'>
-            <div className='p-6'>
-              <p className=''>{skillset.icon}</p>
-              {/* <h3>{skillset.name}</h3> */}
+          {skillset.map((skillset, index) => (
+            <div key={index} className='bg-white shadow-md rounded-lg text-center overflow-hidden hover:scale-110 transform transition duration-700'>
+              <div className='p-6'>
+                <p className='mx-4 mb-3 text-5xl'>{skillset.icon}</p>
+                <p>{skillset.name}</p>
+              </div>
             </div>
-          </div>
-        ))}
+          ))}
         </div>
       </div>
       {/* Footer */}
