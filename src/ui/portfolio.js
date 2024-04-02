@@ -7,8 +7,9 @@ import { TiCss3, TiHtml5 } from "react-icons/ti";
 import { SiTailwindcss } from "react-icons/si";
 import { FaAws } from "react-icons/fa";
 import { IoLogoJavascript } from "react-icons/io";
-import { DiNodejs } from "react-icons/di";
+import { SiMongodb } from "react-icons/si";
 import { FaNode } from "react-icons/fa";
+import { RiGithubFill } from "react-icons/ri";
 
 export default function Portfolio() {
   const { darkMode, toggleDarkMode } = useDarkMode(); // Access dark mode state and toggle function
@@ -19,7 +20,7 @@ export default function Portfolio() {
       title: "Tickets store",
       description: "A website for selling tickets for concerts and parties, built and designed using HTML CSS JS.",
       icon: [
-        <TiHtml5 className='text-orange-600 mr-1.5' />,
+        <TiHtml5 className='text-orange-600 text-xl mr-1.5' />,
         <TiCss3 className='text-black mr-1.5' />,
         <IoLogoJavascript color='black' />
       ],
@@ -54,6 +55,7 @@ export default function Portfolio() {
         <IoLogoJavascript className='text-black mr-1.5' />,
         <FaReact className='text-blue-700 mr-1.5' />,
         <SiTailwindcss className='text-blue-400 mr-1.5' />,
+        <SiMongodb className='text-green-600 mr-1.5' />,
         <FaNode className='text-green-700 text-4xl mr-1.5 ' />,
       ],
       imageUrl: "https://media.istockphoto.com/id/981339754/photo/silhouette-of-engineer-and-construction-team-working-at-site-over-blurred-background-sunset.jpg?b=1&s=612x612&w=0&k=20&c=5TNaaHXK4HaMg81FWc85KtnyvAGbbjU4VJc_EYyfAcg=",
@@ -65,9 +67,9 @@ export default function Portfolio() {
       description: "A personal job site showing the projects I built, about me and contact methods, built in React and stored in the AWS cloud.",
       icon: [
         <FaReact color='blue' className=' mr-1.5' />,
-        <TiHtml5 className='text-orange-600 mr-1.5' />,
+        <TiHtml5 className='text-orange-600 text-xl mr-1.5' />,
         <SiTailwindcss className='text-blue-400 mr-1.5' />,
-        <FaAws className='text-black' />
+        <FaAws className='text-black text-2xl mr-1.5' />
       ],
       imageUrl: "https://images.pexels.com/photos/14936128/pexels-photo-14936128.jpeg?auto=compress&cs=tinysrgb&w=600",
       liveUrl: "https://main.d1tbejhneij7v7.amplifyapp.com/",
@@ -87,7 +89,7 @@ export default function Portfolio() {
           <nav className="flex space-x-4">
             <ul className="flex space-x-4">
               <li><a href="/" className={darkMode ? 'text-gray-300 hover:text-white' : 'text-gray-600 hover:text-gray-800'}>Home</a></li>
-              <li><a href="/portfolio" className={darkMode ? 'text-gray-300 hover:text-white' : 'text-gray-600 hover:text-gray-800'}>Portfolio</a></li>
+              <li><a href="/portfolio" className={darkMode ? 'text-gray-300 hover:text-white' : 'text-gray-600 hover:text-gray-800'}>Projects</a></li>
               <li><a href="/about" className={darkMode ? 'text-gray-300 hover:text-white' : 'text-gray-600 hover:text-gray-800'}>About Me</a></li>
               <li><a href="/contact" className={darkMode ? 'text-gray-300 hover:text-white' : 'text-gray-600 hover:text-gray-800'}>Contact</a></li>
             </ul>
@@ -102,7 +104,8 @@ export default function Portfolio() {
       {/* Main Content */}
       <main className={darkMode ? 'dark text-white flex-1 container mx-auto px-6 py-12' : 'container mx-auto px-6 py-12 flex-1'}>
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-bold mb-8 text-center">Portfolio</h2>
+          <h2 className="text-3xl font-bold mb-2 text-center">Projects</h2>
+          <p className='text-center mb-8'>Here are a few projects i've worked on recently.</p>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {projects.map((project, index) => (
               <div key={index} className="bg-white shadow-md rounded-lg overflow-hidden">
@@ -112,8 +115,8 @@ export default function Portfolio() {
                   <p className="text-gray-600 mb-4">{project.description}</p>
                   <p className="text-gray-600 mb-4 flex">{project.icon}</p>
                   <div className="flex justify-center">
-                    <a href={project.liveUrl} className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-lg mr-4">Live Demo</a>
-                    <a href={project.githubUrl} className="bg-gray-500 hover:bg-gray-600 text-white font-bold py-2 px-4 rounded-lg">GitHub</a>
+                    <a href={project.liveUrl} className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-3 rounded-lg mr-4">Live Demo</a>
+                    <a href={project.githubUrl} className="bg-gray-500 flex hover:bg-gray-600 text-white font-bold py-2 px-4 rounded-lg "><RiGithubFill className='mt-1 mr-1'/> GitHub</a>
                   </div>
                 </div>
               </div>
