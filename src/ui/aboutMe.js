@@ -2,10 +2,51 @@ import React from 'react';
 import WbSunnyOutlinedIcon from '@mui/icons-material/WbSunnyOutlined';
 import NightlightRoundIcon from '@mui/icons-material/NightlightRound';
 import { useDarkMode } from '../darkModeContext'; // Import the custom hook
+import { FaReact } from "react-icons/fa";
+import { TiCss3, TiHtml5 } from "react-icons/ti";
+import { SiTailwindcss } from "react-icons/si";
+import { SiExpress } from "react-icons/si";
+import { FaAws } from "react-icons/fa";
+import { IoLogoJavascript } from "react-icons/io";
+import { SiMongodb } from "react-icons/si";
+import { FaNode } from "react-icons/fa";
+import { RiGithubFill } from "react-icons/ri";
 
 export default function About() {
   const { darkMode, toggleDarkMode } = useDarkMode(); // Access dark mode state and toggle function
-
+  const skillset = [
+    {
+      icon: <TiHtml5 className='text-orange-500 mb-3 text-5xl'/>,
+    },
+    {
+      icon: <TiCss3 />,
+      name: 'CSS3',
+    },
+    {
+      icon: <IoLogoJavascript />,
+      name: 'Javascript',
+    },
+    {
+      icon: <FaReact />,
+      name: 'React',
+    },
+    {
+      icon: <FaNode />,
+      name: 'Node.js',
+    },
+    {
+      icon: <SiTailwindcss />,
+      name: 'Tailwind',
+    },
+    {
+      icon: <SiExpress />,
+      name: 'Express.js',
+    },
+    {
+      icon: < RiGithubFill/>,
+      name: 'GitHub',
+    },
+  ]
   return (
     <div className={darkMode ? 'dark bg-gray-900 min-h-screen flex flex-col' : 'flex flex-col min-h-screen'}>
       {/* Header */}
@@ -40,7 +81,19 @@ export default function About() {
       </main>
 
       {/*Skills */}
-      <div className="mt-8 flex justify-center"></div>
+        <h2 className='text-center text-3xl font-bold'>Skillset</h2>
+      <div className="mt-8 flex justify-center mb-10">
+        <div className=' grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-12'>
+        {skillset.map((skillset,index)=>(
+          <div key={index} className='bg-white shadow-md rounded-lg overflow-hidden'>
+            <div className='p-6'>
+              <p className=''>{skillset.icon}</p>
+              {/* <h3>{skillset.name}</h3> */}
+            </div>
+          </div>
+        ))}
+        </div>
+      </div>
       {/* Footer */}
       <footer className={darkMode ? 'dark bg-gray-800 text-white py-4' : 'bg-gray-800 text-white py-4'}>
         <div className="container mx-auto text-center">
