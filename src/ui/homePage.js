@@ -8,6 +8,7 @@ import { FaFacebookSquare } from "react-icons/fa";
 import { BiLogoGmail } from "react-icons/bi";
 import { FaInstagram } from "react-icons/fa";
 import { FaRegStar } from "react-icons/fa";
+import { FaCodeBranch } from "react-icons/fa";
 
 export default function Homepage() {
   const { darkMode, toggleDarkMode } = useDarkMode(); // Access dark mode state and toggle function
@@ -20,11 +21,11 @@ export default function Homepage() {
           <h1 className={darkMode ? 'text-xl font-bold text-white' : 'text-xl font-bold text-gray-800'}>My Portfolio</h1>
           {/* Navigation */}
           <nav className="flex space-x-4">
-            <ul className="flex space-x-4">
+            <ul className="flex space-x-5">
               <li><a href="/portfolio" className={darkMode ? 'text-gray-300 hover:text-white' : 'text-gray-600 hover:text-gray-800'}>Projects</a></li>
               <li><a href="/about" className={darkMode ? 'text-gray-300 hover:text-white' : 'text-gray-600 hover:text-gray-800'}>About Me</a></li>
               <li><a href="/contact" className={darkMode ? 'text-gray-300 hover:text-white' : 'text-gray-600 hover:text-gray-800'}>Contact</a></li>
-              <li><a href="https://github.com/King-moshe/amplify-react" target='_blank' className={darkMode ? 'text-gray-300 hover:text-white' : 'text-gray-600 hover:text-gray-800'} rel="noreferrer"><FaRegStar className='mt-1'/></a></li>
+              <li><a href="https://github.com/King-moshe/amplify-react" target='_blank' className={darkMode ? 'text-gray-300 flex hover:text-white' : 'text-gray-600 flex hover:text-gray-800'} rel="noreferrer"><FaCodeBranch className='mt-1 me-1'/> <FaRegStar className='mt-1'/></a></li>
             </ul>
           </nav>
           {/* Dark mode toggle button */}
